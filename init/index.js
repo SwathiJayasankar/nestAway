@@ -1,8 +1,9 @@
 const mongoose = require("mongoose");
+const path = require("path");
 const initData = require("./data.js");
 const Listing = require("../models/listing.js");
 
-require("dotenv").config({ path: "../.env" });
+require("dotenv").config({ path: path.join(__dirname, "../.env") });
 const mongo_url = process.env.ATLASDB_URL;
 
 main()

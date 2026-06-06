@@ -1,6 +1,6 @@
 <% layout("/layouts/boilerplate") -%>
 
-<body>
+
     <div class="show-page">
         <div class="row g-4 mb-4">
             <div class="col-lg-7">
@@ -13,7 +13,7 @@
                     <h1 class="show-title"><%= listing.title %></h1>
                     <p class="show-meta">
                         <i class="fa-regular fa-user"></i>
-                        Hosted by <strong><%= listing.owner.username %></strong>
+                        Hosted by <strong><%= listing.owner ? listing.owner.username : 'Anonymous' %></strong>
                     </p>
                     <p class="show-price">
                         &#8377; <%= listing.price.toLocaleString("en-IN") %>
@@ -111,4 +111,3 @@
         </div>
     </div>
     <%- include("../includes/mapAssets.ejs") %>
-</body>
