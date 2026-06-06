@@ -1,0 +1,66 @@
+<% layout("/layouts/boilerplate") -%>
+
+<body>
+    <div class="page-header text-center">
+        <h3>Host a new stay</h3>
+        <p class="subtitle">Share your place with travelers on NestAway</p>
+    </div>
+
+    <div class="form-card">
+        <form method="POST" action="/" novalidate class="needs-validation" enctype="multipart/form-data">
+            <div class="mb-3">
+                <label for="title" class="form-label">Title</label>
+                <input name="listing[title]" id="title" placeholder="Cozy cabin with lake view" type="text" class="form-control" required>
+                <div class="invalid-feedback">Enter a title</div>
+            </div>
+
+            <div class="mb-3">
+                <label for="category" class="form-label">Category</label>
+                <select name="listing[category]" id="category" class="form-select" required>
+                    <% for (let cat of categories) { %>
+                        <option value="<%= cat.id %>"><%= cat.label %></option>
+                    <% } %>
+                </select>
+                <div class="invalid-feedback">Select a category</div>
+            </div>
+
+            <div class="mb-3">
+                <label for="description" class="form-label">Description</label>
+                <textarea name="listing[description]" id="description" placeholder="Describe your place..." class="form-control" rows="4" required></textarea>
+                <div class="invalid-feedback">Please enter a description</div>
+            </div>
+
+            <div class="mb-3">
+                <label for="imageUrl" class="form-label">Image link</label>
+                <input name="listing[image]" id="imageUrl" placeholder="https://..." type="text" class="form-control">
+            </div>
+
+            <div class="mb-3">
+                <label for="image" class="form-label">Upload image</label>
+                <input name="image" id="image" type="file" accept="image/*" class="form-control">
+                <div class="form-text">Upload a file or use a URL above. Upload takes priority.</div>
+            </div>
+
+            <div class="row g-3 mb-3">
+                <div class="col-md-4">
+                    <label for="price" class="form-label">Price (&#8377;)</label>
+                    <input name="listing[price]" id="price" placeholder="1500" class="form-control" required>
+                    <div class="invalid-feedback">Enter a valid price</div>
+                </div>
+                <div class="col-md-8">
+                    <label for="country" class="form-label">Country</label>
+                    <input name="listing[country]" id="country" placeholder="India" type="text" class="form-control" required>
+                    <div class="invalid-feedback">Enter a country</div>
+                </div>
+            </div>
+
+            <div class="mb-4">
+                <label for="location" class="form-label">Location</label>
+                <input name="listing[location]" id="location" placeholder="Goa" type="text" class="form-control" required>
+                <div class="invalid-feedback">Enter a location</div>
+            </div>
+
+            <button class="btn btn-primary add-btn w-100">Create listing</button>
+        </form>
+    </div>
+</body>

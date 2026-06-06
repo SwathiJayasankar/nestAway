@@ -1,0 +1,24 @@
+<% layout("/layouts/boilerplate") -%>
+
+<div class="form-card auth-card">
+    <h2 class="text-center">Join NestAway</h2>
+    <p class="text-center text-muted mb-4">Create an account to book and host stays</p>
+    <form action="/signup" method="POST" class="needs-validation" novalidate>
+        <div class="mb-3">
+            <label for="username" class="form-label">Username</label>
+            <input name="username" id="username" type="text" class="form-control" placeholder="Choose a username" required>
+        </div>
+        <div class="mb-3">
+            <label for="email" class="form-label">Email</label>
+            <input name="email" id="email" type="email" class="form-control" placeholder="you@email.com" required>
+        </div>
+        <div class="mb-4">
+            <label for="password" class="form-label">Password</label>
+            <input name="password" id="password" type="password" class="form-control" placeholder="Create a password" required>
+        </div>
+        <button class="btn btn-primary w-100 add-btn">Sign up</button>
+        <p class="text-center mt-3 mb-0 text-muted">
+            Already have an account? <a href="/login" class="text-decoration-none" style="color: var(--primary); font-weight: 600;">Log in</a>
+        </p>
+    </form>
+</div>

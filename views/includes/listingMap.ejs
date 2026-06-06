@@ -1,0 +1,10 @@
+<div
+    class="listing-map <%= typeof mapSize !== 'undefined' ? mapSize : 'map-md' %>"
+    data-location="<%= listing.location %>"
+    data-country="<%= listing.country %>"
+    data-title="<%= listing.title %>"
+    <% if (listing.geometry && listing.geometry.coordinates && listing.geometry.coordinates.length === 2) { %>
+    data-lng="<%= listing.geometry.coordinates[0] %>"
+    data-lat="<%= listing.geometry.coordinates[1] %>"
+    <% } %>
+></div>

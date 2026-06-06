@@ -1,0 +1,19 @@
+<div class="category-filters-wrap">
+    <div class="category-filters" role="tablist" aria-label="Filter listings by category">
+        <% for (let cat of categories) { %>
+            <% 
+                let filterHref = `/?category=${cat.id}`;
+                if (searchQuery) filterHref += `&search=${encodeURIComponent(searchQuery)}`;
+            %>
+            <a
+                href="<%= filterHref %>"
+                class="category-filter <%= activeCategory === cat.id ? 'active' : '' %>"
+                role="tab"
+                aria-selected="<%= activeCategory === cat.id %>"
+            >
+                <i class="fa-solid <%= cat.icon %>"></i>
+                <span><%= cat.label %></span>
+            </a>
+        <% } %>
+    </div>
+</div>
