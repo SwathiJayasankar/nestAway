@@ -1,6 +1,6 @@
 # NestAway 🏠
 
-NestAway is a premium Airbnb-style full-stack web application designed for discovering, booking, and hosting unique stays around the world. It provides a seamless experience for users to explore properties by various categories, read reviews, and manage their own listings.
+NestAway is a full-stack web application designed for discovering, booking, and hosting unique stays around the world. It provides a seamless experience for users to explore properties by various categories, read reviews, and manage their own listings.
 
 ## ✨ Features
 

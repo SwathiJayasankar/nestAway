@@ -52,7 +52,7 @@ const listingSchema = new Schema({
 //deletes all review of the deleted listing
 listingSchema.post("findOneAndDelete", async (listing) => {
     if (listing){
-        await Review.deleteMany({reviews : {$in: listing.reviews}})
+        await Review.deleteMany({_id : {$in: listing.reviews}})
     }
 })
 
