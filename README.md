@@ -35,8 +35,8 @@ NestAway is a full-stack web application designed for discovering, booking, and 
 
 1. **Clone the repo**
    ```bash
-   git clone <your-repository-url>
-   cd "Project Abnb"
+   git clone https://github.com/SwathiJayasankar/nestAway.git
+   cd nestAway
    ```
 
 2. **Install dependencies**
@@ -50,8 +50,8 @@ NestAway is a full-stack web application designed for discovering, booking, and 
    CLOUD_NAME=your_cloud_name
    CLOUD_API_KEY=your_api_key
    CLOUD_API_SECRET=your_api_secret
-   # MongoDB connection string
-   # MONGO_URL=mongodb://127.0.0.1:27017/wanderlust
+   ATLASDB_URL=your mongodb url
+   SECRET=your secret key
    ```
 
 4. **Initialize Sample Data** (Optional)
@@ -74,6 +74,3 @@ NestAway is a full-stack web application designed for discovering, booking, and 
 - `/middleware`: Application-level and route-level middlewares.
 - `/utils`: Helper functions and error handlers.
 
-## 📄 License
-
-This project is licensed under the [ISC License](LICENSE).
